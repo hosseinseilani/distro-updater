@@ -1,5 +1,4 @@
-#! /bin/bash
-
+#!/bin/bash
 clear
 tput setaf 3;echo "--------------Updating predator-OS to last version---------------"
 echo
@@ -15,7 +14,7 @@ clear
 
 sudo mkdir /var/lib/chkbook
 tput setaf 3;echo "--------------Checking the current version---------------"
-echo 
+echo
 sleep 3
 
  
@@ -79,7 +78,7 @@ cp -rf /opt/predator-os-updater/os-release   /usr/lib/os-release
 
 clear
 tput setaf 3;echo "--------------Backup the current apt and sources.list---------------"
-echo 
+echo
 
 
 sudo apt clean -y
@@ -96,7 +95,7 @@ sudo apt nala update -y
 
 clear
 tput setaf 3;echo "--------------Installing the new tools---------------"
-echo 
+echo
 
 
 sudo pip install git-dumper
@@ -127,8 +126,7 @@ sudo apt -f install
 
 clear
 tput setaf 3;echo "--------------verifying the installation---------------"
-sleep 2 
-
+sleep 2
 
 sudo sed -i '/^deb http://kali.mirror.garr.it/mirrors/kali kali-last-snapshot main contrib non-free non-free-firmware/d' /etc/apt/sources.list
 
@@ -162,7 +160,7 @@ sudo systemctl mask rsyslog.service
 
 clear
 tput setaf 3;echo "-------------- finalizing--------------"
-echo 
+echo
 sleep 2
 echo
 
@@ -194,7 +192,7 @@ sudo update-initramfs -uv
 
 sudo apt update
 clear
-echo 
+echo
 tput setaf 3;echo "-------------- finished,You have new Version of Predator--------------"
 sleep 2
 neofetch
